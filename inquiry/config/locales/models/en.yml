@@ -1,0 +1,11 @@
+en:
+  activerecord:
+    models:
+      inquiry: 'Inquiry'
+    attributes:
+      inquiry:
+        inquiry_at: 'Inquiry Date/Time'
+        inquiry_cd: 'Inquiry Code'
+        inquiry_content: 'Inquiry Content'
+        accept_cd: 'Accept Code'
+        error_json: 'Error'

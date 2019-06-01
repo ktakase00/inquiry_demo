@@ -1,0 +1,24 @@
+ja:
+  time:
+    formats:
+      datetime: '%Y/%m/%d %H:%M'
+  app:
+    new: '新規登録'
+    show: '詳細'
+    edit: '編集'
+    destroy: '削除'
+    submit: '登録する'
+    back: '戻る'
+    are_you_sure: 'よろしいですか？'
+    model_action: '%{model}%{action}'
+    not_selected: '選択してください'
+    validation_failed: '%{count}件のエラーのため、この%{model}は保存できませんでした。'
+  notice:
+    create:
+      success: '%{model}を登録しました。'
+      failure: '%{model}の登録に失敗しました。'
+  const:
+    inquiry_cd:
+      '01': '営業への質問'
+      '02': 'ヘルプデスクへの質問'
+      '03': '技術フォーラムへの質問'

@@ -1,0 +1,35 @@
+<div class="app-page-container">
+  <p id="notice"><%= notice %></p>
+
+  <h1><%= t('activerecord.models.inquiry') %></h1>
+
+  <div>
+    <%= link_to i18n_model_action(:inquiry, :new), new_inquiry_path, { class: 'button primary' } %>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th><%= t('activerecord.attributes.inquiry.inquiry_at') %></th>
+        <th><%= t('activerecord.attributes.inquiry.inquiry_cd') %></th>
+        <th><%= t('activerecord.attributes.inquiry.inquiry_content') %></th>
+        <th><%= t('activerecord.attributes.inquiry.accept_cd') %></th>
+        <th><%= t('activerecord.attributes.inquiry.error_json') %></th>
+        <th colspan="1"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @inquiries.each do |inquiry| %>
+        <tr>
+          <td><%= l(inquiry.inquiry_at, { format: :datetime }) %></td>
+          <td><%= t("const.inquiry_cd.#{inquiry.inquiry_cd}") %></td>
+          <td><%= display_multiline(inquiry.inquiry_content) %></td>
+          <td><%= inquiry.accept_cd %></td>
+          <td><%= display_json(inquiry.error_json) %></td>
+          <td><%= link_to t('app.show'), inquiry %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

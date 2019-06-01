@@ -1,0 +1,11 @@
+ja:
+  activerecord:
+    models:
+      inquiry: 'お問い合わせ'
+    attributes:
+      inquiry:
+        inquiry_at: '問い合わせ日時'
+        inquiry_cd: '問い合わせコード'
+        inquiry_content: '問い合わせ内容'
+        accept_cd: '受付コード'
+        error_json: 'エラー内容'

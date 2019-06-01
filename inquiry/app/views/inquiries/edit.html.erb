@@ -1,0 +1,8 @@
+<div class="app-page-container">
+  <h1><%= i18n_model_action(:inquiry, :edit) %></h1>
+
+  <%= render 'form', inquiry: @inquiry %>
+
+  <%= link_to t('app.show'), @inquiry %> |
+  <%= link_to t('app.back'), inquiries_path %>
+</div>

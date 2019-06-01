@@ -1,0 +1,24 @@
+en:
+  time:
+    formats:
+      datetime: '%m-%d-%Y %H:%M'
+  app:
+    new: 'New'
+    show: 'Show'
+    edit: 'Edit'
+    destroy: 'Destroy'
+    submit: 'Submit'
+    back: 'Back'
+    are_you_sure: 'Are you sure?'
+    model_action: '%{action} %{model}'
+    not_selected: 'Not Selected'
+    validation_failed: '%{count} errors prohibited this %{model} from being saved:'
+  notice:
+    create:
+      success: '%{model} was successfully created.'
+      failure: 'Failed to create an %{model}'
+  const:
+    inquiry_cd:
+      '01': 'Question for Sales'
+      '02': 'Question for Help Desk'
+      '03': 'Question for Tech Forum'

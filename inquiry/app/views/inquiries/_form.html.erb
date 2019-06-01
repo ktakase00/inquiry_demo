@@ -1,0 +1,40 @@
+<%= form_with(model: inquiry, local: true) do |form| %>
+  <% if inquiry.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= t("app.validation_failed", {
+        count: inquiry.errors.count,
+        model: t("activerecord.models.#{inquiry.class.name.underscore}")
+      }) %></h2>
+
+      <ul>
+      <% inquiry.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="grid-container full">
+    <div class="grid-x">
+      <div class="field cell medium-6">
+        <%= form.label :inquiry_cd %>
+        <%= form.select :inquiry_cd, make_const_options(:inquiry_cd) %>
+      </div>
+      <div class="auto"></div>
+    </div>
+
+    <div class="grid-x">
+      <div class="field cell medium-12 large-10">
+        <%= form.label :inquiry_content %>
+        <%= form.text_area :inquiry_content %>
+      </div>
+      <div class="auto"></div>
+    </div>
+
+    <div class="grid-x">
+      <div class="actions cell">
+        <%= form.submit t('app.submit'), { class: 'button' } %>
+      </div>
+    </div>
+  </div>
+<% end %>

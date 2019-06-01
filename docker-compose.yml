@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+  web:
+    build: .
+    image: ktakase00/rubypg-learn:uv-201905
+    volumes:
+      - ".:/home/ubuntu/repo"
+  db:
+    image: postgres:11
+    environment:
+      POSTGRES_USER: inquiry
+      POSTGRES_PASSWORD: inquiry
+      POSTGRES_DB: web_development
+      TZ: "Asia/Tokyo"
+    ports:
+      - 5432:5432

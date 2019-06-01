@@ -1,0 +1,52 @@
+<div class="app-page-container">
+  <p id="notice"><%= notice %></p>
+
+  <div class="grid-container full app-inquiry-show-blk">
+    <div class="grid-x">
+      <div class="cell small-4 medium-2 app-cell app-cell-header">
+        <%= t('activerecord.attributes.inquiry.inquiry_at') %>
+      </div>
+      <div class="cell auto app-cell app-cell-content">
+        <%= l(@inquiry.inquiry_at, { format: :datetime }) %>
+      </div>
+    </div>
+
+    <div class="grid-x">
+      <div class="cell small-4 medium-2 app-cell app-cell-header">
+        <%= t('activerecord.attributes.inquiry.inquiry_cd') %>
+      </div>
+      <div class="cell auto app-cell app-cell-content">
+        <%= t("const.inquiry_cd.#{@inquiry.inquiry_cd}") %>
+      </div>
+    </div>
+
+    <div class="grid-x">
+      <div class="cell small-4 medium-2 app-cell app-cell-header">
+        <%= t('activerecord.attributes.inquiry.inquiry_content') %>
+      </div>
+      <div class="cell auto app-cell app-cell-content">
+        <%= display_multiline(@inquiry.inquiry_content) %>
+      </div>
+    </div>
+
+    <div class="grid-x">
+      <div class="cell small-4 medium-2 app-cell app-cell-header">
+        <%= t('activerecord.attributes.inquiry.accept_cd') %>
+      </div>
+      <div class="cell auto app-cell app-cell-content">
+        <%= @inquiry.accept_cd %>
+      </div>
+    </div>
+
+    <div class="grid-x app-row-bottom">
+      <div class="cell small-4 medium-2 app-cell app-cell-header">
+        <%= t('activerecord.attributes.inquiry.error_json') %>
+      </div>
+      <div class="cell auto app-cell app-cell-content">
+        <%= display_json(@inquiry.error_json) %>
+      </div>
+    </div>
+  </div>
+
+  <%= link_to t('app.back'), inquiries_path %>
+</div>

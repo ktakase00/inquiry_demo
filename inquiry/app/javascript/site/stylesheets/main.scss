@@ -1,0 +1,75 @@
+/* 共通：ページ全体の余白 */
+.app-page-container {
+  padding: 20px;
+}
+
+/* 共通：ページタイトルの文字サイズ */
+h1 {
+  font-size: 20pt;
+}
+
+/* お問い合わせ詳細画面：表のマージン下側 */
+.app-inquiry-show-blk {
+  margin-bottom: 12px;
+}
+
+/* お問い合わせ詳細画面：表内セルの余白と罫線 */
+.app-inquiry-show-blk .app-cell {
+  padding: 8px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #cccccc;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-left-color: #cccccc;
+}
+
+/* お問い合わせ詳細画面：表の罫線右側 */
+.app-inquiry-show-blk .app-cell-content {
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-right-color: #cccccc;
+}
+
+/* お問い合わせ詳細画面：表の罫線下側 */
+.app-inquiry-show-blk .app-row-bottom .app-cell {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #cccccc;
+}
+
+/* お問い合わせ詳細画面：表の項目名背景色 */
+.app-inquiry-show-blk .app-cell-header {
+  background-color: #eeeeee;
+}
+
+/* お問い合わせ新規登録画面：エラー表示領域罫線 */
+#error_explanation {
+  border-color: #cc3333;
+  border-width: 1px;
+}
+
+/* お問い合わせ新規登録画面：問い合わせ内容入力欄の高さ */
+textarea[name="inquiry[inquiry_content]"] {
+  height: 160px;
+}
+
+/* お問い合わせ新規登録画面：エラー表示タイトルの背景色 */
+#error_explanation h2 {
+  background-color: #cc3333;
+}
+
+/* お問い合わせ新規登録画面：バリデーションエラーのある入力項目の背景色をリセット */
+.field_with_errors {
+  display: block;
+  background-color: transparent;
+}
+
+/* お問い合わせ新規登録画面：バリデーションエラーのある入力項目の罫線 */
+.field_with_errors select,
+.field_with_errors textarea {
+  padding: 2px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #cc3333;
+}
