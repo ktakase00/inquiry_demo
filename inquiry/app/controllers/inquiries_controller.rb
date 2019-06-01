@@ -25,9 +25,21 @@ class InquiriesController < ApplicationController
   # POST /inquiries
   # POST /inquiries.json
   def create
-    if @inquiry.save
+    begin
+      # ビジネスロジックの窓口に処理を委譲する
+      # ※オブジェクト指向ポイント1:
+      #   コントローラから問い合わせ登録処理を切り出し、コントローラ、レジストラそれぞれの
+      #   責務を分離する(カプセル化)
+      facade = Registrar::Facade.new(@inquiry)
+      facade.execute
+
+      # DBへの保存に成功したらリダイレクトする
       redirect_to @inquiry, { notice: make_notice(@inquiry.success?) }
-    else
+
+    rescue => e
+      # DBへの保存失敗その他の例外時は入力画面を再描画する
+      logger.error e.full_message
+      @inquiry.errors.add(:base, e.message)
       render :new
     end
   end
